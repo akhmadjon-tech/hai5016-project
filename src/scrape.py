@@ -170,7 +170,7 @@ async def main():
         
         # Read Excel file
         logger.info("Reading Excel file...")
-        df = pd.read_excel("campus_restaurant_websites.xlsx", header=2)
+        df = pd.read_excel("Campus_restaurant_menus.xlsx", header=1)
         
         # Filter out rows with empty URLs
         df = df[df["Url"].notna()]
@@ -219,7 +219,7 @@ async def main():
         logger.info(f"Scraping complete. Results saved to {output_file}")
         
     except FileNotFoundError:
-        logger.error("Excel file not found: campus_restaurant_websites.xlsx")
+        logger.error("Excel file not found: Campus_restaurant_menus.xlsx")
     except Exception as e:
         logger.error(f"Fatal error: {str(e)}")
 
