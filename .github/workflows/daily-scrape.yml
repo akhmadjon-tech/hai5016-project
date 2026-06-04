@@ -1,0 +1,42 @@
+name: Daily menu scrape
+
+on:
+  schedule:
+    # 22:00 UTC = 07:00 Asia/Seoul the next day — runs every morning in Seoul time.
+    - cron: "0 22 * * *"
+  # Allow triggering this manually from the GitHub Actions tab (useful for testing).
+  workflow_dispatch:
+
+# Opt into Node.js 24 now — GitHub is making it the default on June 2nd 2026.
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
+permissions:
+  contents: read
+
+jobs:
+  scrape-menus:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    # Reference the GitHub Environment where the SUPABASE_CONNECTION_STRING secret is stored.
+    environment: dev-prod
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Set up uv
+        uses: astral-sh/setup-uv@v6
+
+      - name: Install dependencies
+        run: uv sync
+
+      - name: Run scraper
+        env:
+          SUPABASE_CONNECTION_STRING: ${{ secrets.SUPABASE_CONNECTION_STRING }}
+        run: uv run python scrape.py
