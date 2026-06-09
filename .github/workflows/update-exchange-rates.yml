@@ -40,4 +40,4 @@ jobs:
         env:
           EXCHANGE_RATE_API_KEY: ${{ secrets.EXCHANGE_RATE_API_KEY }}
           SUPABASE_CONNECTION_STRING: ${{ secrets.SUPABASE_CONNECTION_STRING }}
-        run: uv run python exchangerates.py
+        run: uv run python src.exchangerates.py

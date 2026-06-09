@@ -39,4 +39,4 @@ jobs:
       - name: Run scraper
         env:
           SUPABASE_CONNECTION_STRING: ${{ secrets.SUPABASE_CONNECTION_STRING }}
-        run: uv run python scrape.py
+        run: uv run python src.scrape.py
