@@ -120,17 +120,23 @@ The AI agent should **check the database first** before scraping. Only scrape if
 hai5016-project/
 ├── .venv/                   # UV virtual environment (do not touch)
 ├── .github/
-│   └── copilot-instructions.md
+│   ├── copilot-instructions.md
+│   └── workflows/
+│       ├── daily-scrape.yml
+│       └── update-exchange-rates.yaml
 ├── data/
 │   ├── raw/                 # Raw scraped HTML or text
 │   └── processed/           # Extracted JSON files
 ├── notebooks/               # Jupyter notebooks for exploration
+│   ├── first-agent.ipynb
+│   └── final-agent.ipynb
 ├── src/
 │   ├── scraper.py           # Web scraping logic
-│   ├── extractor.py         # LLM-based data extraction
-│   ├── database.py          # Supabase read/write helpers
-│   ├── agent.py             # LangChain agent logic
-│   └── app.py               # Streamlit app entry point
+│   ├── menuparser.py        # LLM-based data(raw) extraction
+│   ├── parse_menu_items.py  # LLM-based menu(item) extraction
+│   ├── getmenus.py          # Supabase read/write helpers
+│   ├── testapi.py           # API tester
+│   └── exchangerates.py     # Exploring API 
 ├── docs/                    # Markdown planning files
 │   ├── plan.md
 │   ├── tasks.md
@@ -138,6 +144,8 @@ hai5016-project/
 ├── .env                     # API keys (never commit this)
 ├── .gitignore
 ├── pyproject.toml           # UV project config
+├── uv.lock
+├── main.py
 └── README.md
 ```
 
