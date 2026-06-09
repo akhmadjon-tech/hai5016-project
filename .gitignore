@@ -12,3 +12,6 @@ wheels/
 results/
 logs/
 *.xlsx
+
+.github/
+.vscode/
