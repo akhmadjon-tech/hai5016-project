@@ -1,0 +1,217 @@
+{
+  "EWHA Womans University": {
+    "rows": 46,
+    "valid_rows": 46,
+    "dates": [
+      "2026-06-08",
+      "2026-06-09",
+      "2026-06-10",
+      "2026-06-11",
+      "2026-06-12",
+      "2026-06-13"
+    ],
+    "meal_types": [
+      "breakfast",
+      "dinner",
+      "lunch"
+    ]
+  },
+  "Hankuk University of Foreign Studies": {
+    "rows": 19,
+    "valid_rows": 19,
+    "dates": [
+      "2026-06-09",
+      "2026-09-06"
+    ],
+    "meal_types": [
+      "breakfast",
+      "dinner",
+      "lunch",
+      "unknown"
+    ]
+  },
+  "Hansung University": {
+    "rows": 5,
+    "valid_rows": 5,
+    "dates": [
+      "2026-06-08",
+      "2026-06-09",
+      "2026-06-10",
+      "2026-06-11",
+      "2026-06-12"
+    ],
+    "meal_types": [
+      "lunch"
+    ]
+  },
+  "Hanyang University": {
+    "rows": 22,
+    "valid_rows": 22,
+    "dates": [
+      "2026-06-08",
+      "2026-06-09"
+    ],
+    "meal_types": [
+      "breakfast",
+      "dinner",
+      "lunch"
+    ]
+  },
+  "Hongik University": {
+    "rows": 11,
+    "valid_rows": 10,
+    "dates": [
+      "2026-06-08",
+      "2026-06-09",
+      "2026-06-10",
+      "2026-06-11",
+      "2026-06-12",
+      "2026-06-13"
+    ],
+    "meal_types": [
+      "dinner",
+      "lunch"
+    ]
+  },
+  "Kookmin University": {
+    "rows": 28,
+    "valid_rows": 27,
+    "dates": [
+      "2026-06-09"
+    ],
+    "meal_types": [
+      "dinner",
+      "lunch",
+      "unknown"
+    ]
+  },
+  "Korea University": {
+    "rows": 51,
+    "valid_rows": 50,
+    "dates": [
+      "2026-06-08",
+      "2026-06-09",
+      "2026-06-10",
+      "2026-06-11",
+      "2026-06-12"
+    ],
+    "meal_types": [
+      "breakfast",
+      "dinner",
+      "lunch"
+    ]
+  },
+  "Kwangwoon University": {
+    "rows": 11,
+    "valid_rows": 11,
+    "dates": [
+      "2026-06-08",
+      "2026-06-09",
+      "2026-06-10",
+      "2026-06-11",
+      "2026-06-12"
+    ],
+    "meal_types": [
+      "breakfast",
+      "lunch"
+    ]
+  },
+  "SKKU": {
+    "rows": 9,
+    "valid_rows": 9,
+    "dates": [
+      "2026-06-08",
+      "2026-06-09",
+      "2026-06-10",
+      "2026-06-11",
+      "2026-06-12"
+    ],
+    "meal_types": [
+      "lunch"
+    ]
+  },
+  "SNU": {
+    "rows": 7,
+    "valid_rows": 7,
+    "dates": [
+      "2026-06-09"
+    ],
+    "meal_types": [
+      "breakfast",
+      "dinner",
+      "lunch"
+    ]
+  },
+  "Sangmyung University": {
+    "rows": 7,
+    "valid_rows": 7,
+    "dates": [
+      "2026-06-08",
+      "2026-06-09",
+      "2026-06-10",
+      "2026-06-11",
+      "2026-06-12"
+    ],
+    "meal_types": [
+      "lunch"
+    ]
+  },
+  "Seoul National University": {
+    "rows": 36,
+    "valid_rows": 36,
+    "dates": [
+      "2026-06-09"
+    ],
+    "meal_types": [
+      "breakfast",
+      "dinner",
+      "lunch",
+      "unknown"
+    ]
+  },
+  "Seoul National University of Education (SNUE)": {
+    "rows": 10,
+    "valid_rows": 10,
+    "dates": [
+      "2026-06-08",
+      "2026-06-09",
+      "2026-06-10",
+      "2026-06-11",
+      "2026-06-12"
+    ],
+    "meal_types": [
+      "dinner",
+      "lunch"
+    ]
+  },
+  "Soongsil University": {
+    "rows": 14,
+    "valid_rows": 14,
+    "dates": [
+      "2026-06-08",
+      "2026-06-09",
+      "2026-06-10",
+      "2026-06-11",
+      "2026-06-12",
+      "2026-06-13",
+      "2026-06-14"
+    ],
+    "meal_types": [
+      "dinner",
+      "lunch"
+    ]
+  },
+  "University of Seoul": {
+    "rows": 18,
+    "valid_rows": 18,
+    "dates": [
+      "2026-04-09",
+      "2026-06-09"
+    ],
+    "meal_types": [
+      "breakfast",
+      "dinner",
+      "lunch"
+    ]
+  }
+}
