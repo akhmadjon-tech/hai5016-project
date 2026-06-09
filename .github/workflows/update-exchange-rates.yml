@@ -1,0 +1,43 @@
+name: Update exchange rates
+
+on:
+  schedule:
+    # 21:00 UTC = 06:00 Asia/Seoul the next day.
+    - cron: "0 21 * * *"
+  workflow_dispatch:
+
+# Opt into Node.js 24 now — GitHub is making it the default on June 2nd 2026.
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
+permissions:
+  contents: read
+
+jobs:
+  update-rates:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    # Reference the GitHub Environment where the secrets are stored.
+    environment: dev-prod
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Set up uv
+        uses: astral-sh/setup-uv@v6
+
+      - name: Install dependencies
+        # Use uv sync without --frozen so the lockfile can be updated if needed.
+        run: uv sync
+
+      - name: Fetch and save latest exchange rates
+        env:
+          EXCHANGE_RATE_API_KEY: ${{ secrets.EXCHANGE_RATE_API_KEY }}
+          SUPABASE_CONNECTION_STRING: ${{ secrets.SUPABASE_CONNECTION_STRING }}
+        run: uv run python exchangerates.py
